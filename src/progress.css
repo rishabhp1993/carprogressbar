@@ -1,5 +1,62 @@
 .container {
   padding: 15px;
+}
+.carcontainer {
+  display: flex;
+  width: 0%;
+}
+.car {
+}
+.emptybar {
+  background-color: #eee;
+  border-radius: 4px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+}
+.bar {
+  width: 60%;
+  height: 8px;
+  background-color: green;
+  border-radius: 4px;
+}
+.stepscontainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.step {
+  width: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stepcirclecomplete {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  background-color: green;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.stepcirclepending {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+}
+.icon {
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.steplabel {
+  margin: 5px 0;
+  color: gray;
+  font-size: 0.8rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
 }
