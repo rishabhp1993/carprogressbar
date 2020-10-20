@@ -3,9 +3,25 @@
 }
 .carcontainer {
   display: flex;
-  width: 0%;
 }
+
 .car {
+  position: relative;
+  top: 14px;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes example {
+  0% {
+    left: calc(0%);
+  }
+  100% {
+    left: calc(100%);
+  }
 }
 .emptybar {
   background-color: #eee;
@@ -14,16 +30,30 @@
   display: flex;
   margin-bottom: 10px;
 }
-.bar {
-  width: 60%;
+.barfluid {
   height: 8px;
   background-color: green;
   border-radius: 4px;
+  animation-name: animatebar;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  width: 0%;
+}
+@keyframes animatebar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 .stepscontainer {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .step {
   position: relative;
@@ -34,10 +64,22 @@
   height: 20px;
   border: 2px solid #ddd;
   border-radius: 20px;
-  background-color: green;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation-name: animateicons;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes animateicons {
+  0% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: green;
+  }
 }
 .stepcirclepending {
   width: 20px;
