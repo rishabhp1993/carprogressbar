@@ -25,6 +25,7 @@ class Progress extends React.Component {
             <div className="stepcirclecomplete">
               <CheckIcon className="icon" />
             </div>
+            <p className="steplabel">Step 2</p>
           </div>
           <div class="step">
             <div className="stepcirclecomplete">
@@ -36,6 +37,7 @@ class Progress extends React.Component {
             <div className="stepcirclecomplete">
               <CheckIcon className="icon" />
             </div>
+            <p className="steplabel">Step 2</p>
           </div>
         </div>
       </div>

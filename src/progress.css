@@ -26,9 +26,7 @@
   justify-content: space-between;
 }
 .step {
-  width: 25px;
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
 .stepcirclecomplete {
@@ -52,11 +50,13 @@
   color: #fff;
   font-weight: bold;
 }
-
 .steplabel {
   margin: 5px 0;
   color: gray;
   font-size: 0.8rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  position: relative;
+  position: absolute;
+  width: 100px;
+  text-align: center;
+  right: -40px;
 }
