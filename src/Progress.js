@@ -46,7 +46,7 @@ class Progress extends React.Component {
         >
           <img
             className="car"
-            alt="milestone"
+            alt="car"
             width="50px"
             height="25px"
             src={greencar}
