@@ -1,33 +1,34 @@
 .container {
   padding: 15px;
-}
-.carcontainer {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-
 .car {
   position: relative;
-  top: 14px;
   animation-name: example;
   animation-duration: 2s;
   animation-delay: 2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+  left: -22px;
+  bottom: 10px;
 }
 
 @keyframes example {
   0% {
-    left: calc(0%);
+    left: calc(0% - 22px);
   }
   100% {
-    left: calc(100%);
+    left: calc(100% - 22px);
   }
 }
 .emptybar {
+  width: calc(100% - 22px);
   background-color: #eee;
   border-radius: 4px;
-  width: 100%;
-  display: flex;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 10px;
 }
 .barfluid {

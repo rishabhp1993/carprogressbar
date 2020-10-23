@@ -2,21 +2,14 @@ import React from "react";
 import "./progress.css";
 import greencar from "./images/greencar.png";
 import CheckIcon from "@material-ui/icons/Check";
-
 class Progress extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       stagecount: 0,
       data: {
-        completedstepcount: 4,
-        steps: [
-          { stepname: "Step 1" },
-          { stepname: "Step 2" },
-          { stepname: "Step 3" },
-          { stepname: "Step 4" },
-          { stepname: "Step 5" }
-        ]
+        completedstepcount: 3,
+        steps: props.steplabelsprop.split(",")
       },
       progressmade: 0
     };
@@ -36,25 +29,17 @@ class Progress extends React.Component {
     console.log(this.state);
     return (
       <div className="container">
-        <div
-          className="carcontainer"
-          style={
-            this.state.progressmade === 100
-              ? { width: `calc(${this.state.progressmade}% - 35px` }
-              : { width: `${this.state.progressmade}%` }
-          }
-        >
-          <img
-            className="car"
-            alt="car"
-            width="50px"
-            height="25px"
-            src={greencar}
-          />
-        </div>
         <div className="emptybar">
           <div className="bar" style={{ width: `${this.state.progressmade}%` }}>
-            <div className="barfluid"></div>
+            <div className="barfluid">
+              <img
+                className="car"
+                alt="car"
+                width="45px"
+                height="25px"
+                src={greencar}
+              />
+            </div>
           </div>
         </div>
         <div className="stepscontainer">
@@ -69,7 +54,7 @@ class Progress extends React.Component {
               >
                 <CheckIcon className="icon" style={{ fontSize: "14px" }} />
               </div>
-              <p className="steplabel">{step.stepname}</p>
+              <p className="steplabel">{step}</p>
             </div>
           ))}
         </div>

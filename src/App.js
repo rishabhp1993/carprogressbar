@@ -5,7 +5,7 @@ import Progress from "./Progress";
 export default function App() {
   return (
     <div>
-      <Progress />
+      <Progress steplabelsprop="step1,step2,step3,step4" />
     </div>
   );
 }
