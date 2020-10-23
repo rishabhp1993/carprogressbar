@@ -8,7 +8,7 @@ class Progress extends React.Component {
     this.state = {
       stagecount: 0,
       data: {
-        completedstepcount: 3,
+        completedstepcount: 2,
         steps: props.steplabelsprop.split(",")
       },
       progressmade: 0
