@@ -2,6 +2,7 @@ import React from "react";
 import "./progress.css";
 import greencar from "./images/greencar.png";
 import CheckIcon from "@material-ui/icons/Check";
+
 class Progress extends React.Component {
   constructor(props) {
     super(props);
@@ -9,7 +10,8 @@ class Progress extends React.Component {
       stagecount: 0,
       data: {
         completedstepcount: 2,
-        steps: props.steplabelsprop.split(",")
+        steps: props.steplabelsprop.split(","),
+        color: props.colorprop
       },
       progressmade: 0
     };
@@ -27,11 +29,14 @@ class Progress extends React.Component {
   }
   render() {
     console.log(this.state);
+    const styles = {
+      bgcolor: { backgroundColor: this.state.data.color }
+    };
     return (
       <div className="container">
         <div className="emptybar">
           <div className="bar" style={{ width: `${this.state.progressmade}%` }}>
-            <div className="barfluid">
+            <div className="barfluid" style={styles.bgcolor}>
               <img
                 className="car"
                 alt="car"
@@ -46,6 +51,11 @@ class Progress extends React.Component {
           {this.state.data.steps.map((step, i) => (
             <div class="step">
               <div
+                style={
+                  i < this.state.data.completedstepcount
+                    ? styles.bgcolor
+                    : styles.nobgcolor
+                }
                 className={
                   i < this.state.data.completedstepcount
                     ? "stepcirclecomplete"

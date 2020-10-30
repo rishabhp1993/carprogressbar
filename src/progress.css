@@ -7,8 +7,8 @@
 .car {
   position: relative;
   animation-name: example;
-  animation-duration: 2s;
-  animation-delay: 2s;
+  animation-duration: 1s;
+
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   left: -22px;
@@ -37,7 +37,7 @@
   border-radius: 4px;
   animation-name: animatebar;
   animation-duration: 2s;
-  animation-delay: 2s;
+
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
   width: 0%;
@@ -64,22 +64,22 @@
   width: 20px;
   height: 20px;
   border: 2px solid #ddd;
+  background-color: green;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   animation-name: animateicons;
   animation-duration: 2s;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forward;
   animation-timing-function: ease-in-out;
 }
 @keyframes animateicons {
   0% {
-    background-color: #fff;
+    opacity: 0;
   }
   100% {
-    background-color: green;
+    opacity: 1;
   }
 }
 .stepcirclepending {
@@ -87,6 +87,9 @@
   height: 20px;
   border: 2px solid #ddd;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .icon {
   font-size: 14px;
