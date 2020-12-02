@@ -33,7 +33,7 @@
   margin-bottom: 10px;
 }
 .barfluid {
-  height: 8px;
+  height: 10px;
   background-color: green;
   border-radius: 4px;
   animation-name: animatebar;
@@ -42,6 +42,9 @@
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
   width: 0%;
+  /*background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    -webkit-background-size: 10px 10px;
+    background-size: 10px 10px;*/
 }
 @keyframes animatebar {
   0% {
@@ -75,6 +78,7 @@
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
+
 @keyframes animateicons {
   0% {
     background-color: #fff;
@@ -107,4 +111,21 @@
   width: 100px;
   text-align: center;
   right: -40px;
+}
+
+@media only screen and (max-width: 480px) {
+  .stepcirclecomplete {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+  }
+  .stepcirclepending {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #ddd;
+  }
+  .icon {
+    display: none;
+  }
 }

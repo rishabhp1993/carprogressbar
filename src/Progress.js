@@ -42,7 +42,7 @@ class Progress extends React.Component {
                 xmlns="http://www.w3.org/2000/svg"
                 width="45px"
                 height="25px"
-                viewBox="0 0 222.000000 131.000000"
+                viewBox="4 0 222 128"
               >
                 <g
                   transform="translate(0.000000,131.000000) scale(0.100000,-0.100000)"
